@@ -1,0 +1,29 @@
+[{
+  "id":1,
+	"category": "western",
+	"duration": "120",
+	"number_of_players": "3 joueurs par équipe",
+	"theme": "le poireau étendu",
+	"impro_type": "mixte"
+}, {
+  "id":2,
+	"category": "huit clos",
+	"duration": "330",
+	"number_of_players": "3 joueurs",
+	"theme": "la canne à sel",
+	"impro_type": "comparée"
+}, {
+  "id":3,
+	"category": "libre",
+	"duration": "300",
+	"number_of_players": "illimité",
+	"theme": "blanc bouillon et triste souillon",
+	"impro_type": "mixte"
+}, {
+  "id":4,
+	"category": "chantée",
+	"duration": "180",
+	"number_of_players": "tous",
+	"theme": "mange une tuile, ça ira mieux",
+	"impro_type": "comparée"
+}]

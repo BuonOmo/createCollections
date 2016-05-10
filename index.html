@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulaire de cartons</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="container">
+    <form class="form-group" id="impro">
+      <h2 class="page-header">Ajout d’une improvisation</h2>
+      <div>
+        <label for="theme_title">Thème </label><input class="form-control" id="theme_title" placeholder="thème" type="text">
+      </div>
+      <div>
+        <label for="category">Catégorie </label>
+        <input class="form-control" list="category_list" id="category" placeholder="catégorie" type="text">
+        <datalist id="category_list">
+          <!-- TODO add catégorie list https://docs.google.com/document/d/1nMCzP3V6iJFJzuKfjjMEr5C48YfutKVNsjx3Wncp60o/edit -->
+        </datalist>
+      </div>
+      <div>
+        <label for="number_of_players">Nombre de joueurs </label>
+        <input class="form-control" type="text" placeholder="joueurs" list="number_of_players_value" id="number_of_players">
+        <datalist id="number_of_players_value">
+          <option value="illimité">
+          <option value="tous">
+          <option value="1 joueur">
+          <option value="2 joueurs">
+          <option value="3 joueurs">
+          <option value="4 joueurs">
+          <option value="1 joueur par équipe">
+          <option value="2 joueurs par équipe">
+          <option value="3 joueurs par équipe">
+          <option value="4 joueurs par équipe">
+        </datalist>
+      </div>
+      <div>
+        <label for="impro_type">Type d’improvisation </label>
+        <input class="form-control" type="text" list="impro_type_value" placeholder="type" id="impro_type">
+        <datalist id="impro_type_value">
+          <option value="mixte">
+          <option value="comparée">
+          <option value="fusillade">
+        </datalist>
+      </div>
+      <label>Durée</label>
+      <div class="form-inline">
+        <div class="input-group">
+         <input class="form-control" id="timerM" type="number" min="0" max="59" step="1" value="5">
+         <div class="input-group-addon">m</div>
+        </div>
+        <div class="input-group">
+         <input class="form-control" id="timerS" type="number" min="0" max="59" step="1" value="0">
+         <div class="input-group-addon">s</div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-default btn-lg" id="create" type="button">Creer</button>
+        <button class="btn btn-default btn-lg" id="change" type="button">Modifier</button>
+        <button class="btn btn-default btn-lg" id="delete" type="button">Supprimer</button>
+      </div>
+        <label for="export">Exporter dans une image</label><input type="file" accept="image/*" id="export">
+        <label for="import">Importer</label><input type="file" accept="application/json" id="import">
+        <label for="save">Sauvegarder</label><input type="file" accept="application/json" id="save">
+    </form>
+
+    <h2 class="page-header">Visualisation de la collection</h2>
+    <table class="table table-striped table-hover">
+      <thead>
+        <td>#</td>
+        <td>Thème</td>
+        <td>Catégorie</td>
+        <td>Nb Joueurs</td>
+        <td>Type</td>
+        <td>Durée</td>
+      </thead>
+      <tbody id="tableContent">
+      </tbody>
+    </table>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- My script -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

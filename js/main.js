@@ -14,6 +14,7 @@ $('#create').click(function () {
   collection.push(el);
   refreshCollection();
 });
+
 $('#change').click(function () {
   var el = {
     "id":                current_id,
@@ -46,8 +47,16 @@ $('#import').change( function (event) {
   });
 });
 
-$('#export').change(); // TODO export to a pdf or image file (or whatever) to have printable cards for user
+/*********************** Insert categories in html ***********************/
 
+$.getJSON('categories.json', function (data) {
+  var categories = data;
+  for (var i = 0; i < categories.length; i++) {
+    $("#category_list").append('<option value="'+categories[i]+'">')
+  }
+})
+
+/**************************** Table functions ****************************/
 function refreshCollection () {
   $('#tableContent').html('');
   for (var i = 0; i < collection.length; i++) {
@@ -98,6 +107,7 @@ function getElement (anId) {
   $('#impro_type').val( collection[i].impro_type );
 }
 
+/***************************  Saving functions ***************************/
 function writeCollection () {
   var str=JSON.stringify(collection);
   var file=new File([str],"collection.json");

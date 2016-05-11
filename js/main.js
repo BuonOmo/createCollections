@@ -70,12 +70,14 @@ function refreshCollection () {
  */
 function printElement (el) {
   $('#tableContent').append(
-                            "<tr id="+el.id+" onclick=\"getElement('"+el.id+"')\"><td>"+el.id+"</td><td>"
-                            +el.theme+"</td><td>"
-                            +el.category+"</td><td>"
-                            +el.number_of_players+"</td><td>"
-                            +el.impro_type+"</td><td>"
-                            +(el.duration-el.duration%60)/60+":"+el.duration%60+"</td></tr>"
+                            "<tr id="+el.id+" onclick=\"getElement('"+el.id+"')\">"+
+                              "<td hidden>"+el.id+"</td>"+
+                              "<td>"+el.theme+"</td>"+
+                              "<td>"+el.category+"</td>"+
+                              "<td>"+el.number_of_players+"</td>"+
+                              "<td>"+el.impro_type+"</td>"+
+                              "<td>"+(el.duration-el.duration%60)/60+":"+el.duration%60+"</td>"+
+                            "</tr>"
                             );
 }
 

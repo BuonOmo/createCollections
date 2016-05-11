@@ -161,7 +161,6 @@ function collectionToCsv () {
   for (var i = 0; i < collection.length; i++) {
     if (typeof(collection[i+1]) != 'undefined' && typeof(collection[i]) != 'undefined'){
       str+= toCsv(collection[i],collection[++i]);
-      console.log(collection[i]);
     } else {
       str+=toCsv(collection[i]);
     }

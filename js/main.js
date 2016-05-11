@@ -184,7 +184,7 @@ function convertTime(time, showZeros) {
   if (minutes < 10 && (zeros || hours)) {
       minutes = "0" + minutes;
   }
-  if (seconds < 10 && (zeros || (!seconds && minutes) || hours )) {
+  if (seconds < 10 && (zeros || minutes || hours )) {
       seconds = "0" + seconds;
   }
   if (hours) {

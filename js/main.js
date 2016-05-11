@@ -85,7 +85,7 @@ function printElement (el) {
                               "<td>"+el.category+"</td>"+
                               "<td>"+el.number_of_players+"</td>"+
                               "<td>"+el.impro_type+"</td>"+
-                              "<td>"+(el.duration-el.duration%60)/60+":"+el.duration%60+"</td>"+
+                              "<td>"+convertTime(el.duration,false)+"</td>"+
                             "</tr>"
                             );
 }
@@ -124,35 +124,31 @@ function exportCollection () {
 /****************************  CSV conversion  ***************************/
 
 /**
- * take a json impro and convert it to csv
- * @param  object el impro json
- * @return string    csv formatted value
+ * take one or more json impro and convert it to csv
+ * @param  object * impro json
+ * @return string   csv formatted value
  * type;;joueurs;
  * ;theme;;
  * ;;categorie;
  */
-function toCsv (el) {
+function toCsv () {
   var str = "";
-  str+= el.impro_type+";;"+el.number_of_players+";\n"
-  str+= ";"+el.theme+";;\n";
-  str+= ";;"+el.category+";\n";
-  return str;
-}
-
-/**
- * take two json impro and convert it to csv
- * @param  object el1 impro json
- * @param  object el2 impro json
- * @return string     csv formatted value
- * type;;joueurs;;;type;;joueurs;
- * ;theme;;;;;theme;;
- * ;;categorie;;;;;categorie;
- */
-function toCsv (el1,el2) {
-  var str = "";
-  str+= el1.impro_type+";;"+el1.number_of_players+";;;"+el2.impro_type+";;"+el2.number_of_players+";\n"
-  str+= ";"+el1.theme+";;;;"+";"+el2.theme+";;\n";
-  str+= ";;"+el1.category+";;;"+";;"+el2.category+";\n";
+  for (var el = 0; el < arguments.length; el++) {
+    str+= arguments[el].impro_type+";;\""+arguments[el].number_of_players+"\";";
+    str+=";;";
+  }
+  str+="\n";
+  for (var el = 0; el < arguments.length; el++) {
+    str+= ";\""+arguments[el].theme+"\";;";
+    str+=";;";
+  }
+  str+="\n";
+  for (var el = 0; el < arguments.length; el++) {
+    str+= convertTime(arguments[el].duration,false)+
+          ";;\""+arguments[el].category+"\";";
+    str+=";;";
+  }
+  str+="\n";
   return str;
 }
 
@@ -163,12 +159,40 @@ function toCsv (el1,el2) {
 function collectionToCsv () {
   var str = "";
   for (var i = 0; i < collection.length; i++) {
-    if (typeof(collection[i+1]) != 'undefined'){
-      str+= toCsv(collection[i],collection[i++]);
+    if (typeof(collection[i+1]) != 'undefined' && typeof(collection[i]) != 'undefined'){
+      str+= toCsv(collection[i],collection[++i]);
+      console.log(collection[i]);
     } else {
       str+=toCsv(collection[i]);
     }
     str+="\n\n";
   }
   return str;
+}
+
+/********************************* Timer *********************************/
+/**
+ * Convert seconds time to human readable time
+ * @param  number time       time in seconds
+ * @param  bool show_zeros   default value true, show unecessary zeros
+ * @return string            format mm:ss
+ */
+function convertTime(time, showZeros) {
+  var zeros   = (typeof(showZeros) === 'boolean') ? showZeros : true;
+  var hours   = Math.floor(time / 3600);
+  var minutes = Math.floor(time / 60) - 60*hours;
+  var seconds = time % 60;
+  if (minutes < 10 && (zeros || hours)) {
+      minutes = "0" + minutes;
+  }
+  if (seconds < 10 && (zeros || (!seconds && minutes) || hours )) {
+      seconds = "0" + seconds;
+  }
+  if (hours) {
+    return hours + ':' + minutes + ':' + seconds;
+  }
+  if (zeros || minutes) {
+    return minutes + ':' + seconds;
+  }
+  return seconds;
 }

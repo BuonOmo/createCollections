@@ -12,6 +12,7 @@ $('#create').click(function () {
   	"impro_type":        $('#impro_type').val()
   }
   collection.push(el);
+  writeCollection();
   printElement(el);
 });
 $('#change').click(function () {
@@ -28,6 +29,7 @@ $('#change').click(function () {
   collection[i] = el;
   refreshCollection();
 });
+
 $('#delete').click(function () {
   for (var i = 0; i < collection.length; i++)
     if (collection[i].theme == $('#theme_title').val()) break;
@@ -46,13 +48,13 @@ $('#import').change( function (event) {
 });
 
 $('#export').change(); // TODO export to a pdf or image file (or whatever) to have printable cards for user
-$('#save').change(); // TODO save into a .json file
 
 function refreshCollection () {
   $('#tableContent').html('');
   for (var i = 0; i < collection.length; i++) {
     printElement(collection[i]);
   }
+  writeCollection();
 }
 
 /**
@@ -92,4 +94,11 @@ function getElement (anId) {
   $('#theme_title').val( collection[i].theme );
   $('#category').val( collection[i].category );
   $('#impro_type').val( collection[i].impro_type );
+}
+
+function writeCollection () {
+  var str=JSON.stringify(collection);
+  var file=new File([str],"collection.json");
+  var url=URL.createObjectURL(file);
+  $('#save').attr('href',url);
 }

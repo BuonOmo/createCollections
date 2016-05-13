@@ -16,7 +16,12 @@ $('#create').click(function () {
 });
 
 $('#change').click(function () {
-  var el = {
+  for (var i = 0; i < collection.length; i++)
+    if (collection[i].id == current_id) break;
+
+  console.log(collection[i].id);
+  console.log(current_id);
+  collection[i] = {
     "id":                current_id,
     "category":          $('#category').val(),
     "duration":          $('#timerM').val()*60 + $('#timerS').val()*1,
@@ -24,9 +29,6 @@ $('#change').click(function () {
     "theme":             $('#theme_title').val(),
     "impro_type":        $('#impro_type').val()
   }
-  for (var i = 0; i < collection.length; i++)
-    if (collection[i].id == current_id) break;
-  collection[i] = el;
   refreshCollection();
 });
 
@@ -105,6 +107,8 @@ function getElement (anId) {
   $('#theme_title').val( collection[i].theme );
   $('#category').val( collection[i].category );
   $('#impro_type').val( collection[i].impro_type );
+  $('#timerM').val(Math.floor(collection[i].duration/60));
+  $('#timerS').val(collection[i].duration%60);
 }
 
 /***************************  Saving functions ***************************/

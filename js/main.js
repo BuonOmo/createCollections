@@ -1,17 +1,18 @@
-var collection = [];
-var id = 0;
-var current_id;
+let collection = []
+let categories
+let id = 0
+let current_id
 
 $('#create').click(function () {
-  var el = {
-    "id":                ++id,
-  	"category":          $('#category').val(),
-  	"duration":          $('#timerM').val()*60 + $('#timerS').val()*1,
-  	"number_of_players": $('#number_of_players').val(),
-  	"theme":             $('#theme_title').val(),
-  	"impro_type":        $('#impro_type').val()
-  }
-  collection.push(el);
+	const el = {
+		'id': ++id,
+		'category': $('#category').val(),
+		'duration': $('#timerM').val() * 60 + $('#timerS').val() * 1,
+		'number_of_players': $('#number_of_players').val(),
+		'theme': $('#theme_title').val(),
+		'impro_type': $('#impro_type').val(),
+	}
+	collection.push(el);
   refreshCollection();
 });
 
@@ -40,28 +41,36 @@ $('#delete').click(function () {
 });
 
 $('#import').change( function (event) {
-  var tmppath = URL.createObjectURL(event.target.files[0]);
+	const tmppath = URL.createObjectURL(event.target.files[0])
 
-  $.getJSON(tmppath, function(data) {
+	$.getJSON(tmppath, function(data) {
       collection = data;
       id+=collection.length;
       refreshCollection();
   });
 });
 
+$('#category').change(function (event) {
+  const [category] = categories.filter(({name}) => name === event.target.value);
+  $('#category_description').text(
+    (category === undefined || category.description === undefined) ? '' : category.description
+  )
+});
+
 /*********************** Insert categories in html ***********************/
 
 $.getJSON('categories.json', function (data) {
-  var categories = data;
-  for (var i = 0; i < categories.length; i++) {
-    $("#category_list").append('<option value="'+categories[i]+'">')
-  }
+  categories = data
+  $("#category_list").append(categories.map(({name, description}) =>
+	  `<option value="${name}">${
+		  description !== undefined ? description.slice(0, 50) + '...' : ''}</option>`
+  ))
 })
 
 /**************************** Table functions ****************************/
 function refreshCollection () {
   $('#tableContent').html('');
-  for (var i = 0; i < collection.length; i++) {
+  for (let i = 0; i < collection.length; i++) {
     printElement(collection[i]);
   }
   writeCollection();
@@ -113,17 +122,17 @@ function getElement (anId) {
 
 /***************************  Saving functions ***************************/
 function writeCollection () {
-  var str=JSON.stringify(collection);
-  var file=new File([str],"collection.json");
-  var url=URL.createObjectURL(file);
-  $('#save').attr('href',url);
+	const str = JSON.stringify(collection)
+	const file = new File([str], 'collection.json')
+	const url = URL.createObjectURL(file)
+	$('#save').attr('href',url);
 }
 
 function exportCollection () {
-  var str=collectionToCsv();
-  var file=new File([str],"collection.csv");
-  var url=URL.createObjectURL(file);
-  $('#export').attr('href',url);
+	const str = collectionToCsv()
+	const file = new File([str], 'collection.csv')
+	const url = URL.createObjectURL(file)
+	$('#export').attr('href',url);
 }
 /****************************  CSV conversion  ***************************/
 
@@ -136,8 +145,8 @@ function exportCollection () {
  * ;;categorie;
  */
 function toCsv () {
-  var str = "";
-  for (var el = 0; el < arguments.length; el++) {
+	let str = ''
+	for (var el = 0; el < arguments.length; el++) {
     str+= arguments[el].impro_type+";;\""+arguments[el].number_of_players+"\";";
     str+=";;";
   }
@@ -161,8 +170,8 @@ function toCsv () {
  * @return str csv file
  */
 function collectionToCsv () {
-  var str = "";
-  for (var i = 0; i < collection.length; i++) {
+	let str = ''
+	for (let i = 0; i < collection.length; i++) {
     if (typeof(collection[i+1]) != 'undefined' && typeof(collection[i]) != 'undefined'){
       str+= toCsv(collection[i],collection[++i]);
     } else {
@@ -181,11 +190,11 @@ function collectionToCsv () {
  * @return string            format mm:ss
  */
 function convertTime(time, showZeros) {
-  var zeros   = (typeof(showZeros) === 'boolean') ? showZeros : true;
-  var hours   = Math.floor(time / 3600);
-  var minutes = Math.floor(time / 60) - 60*hours;
-  var seconds = time % 60;
-  if (minutes < 10 && (zeros || hours)) {
+	const zeros = (typeof(showZeros) === 'boolean') ? showZeros : true
+	const hours = Math.floor(time / 3600)
+	let minutes = Math.floor(time / 60) - 60 * hours
+	let seconds = time % 60
+	if (minutes < 10 && (zeros || hours)) {
       minutes = "0" + minutes;
   }
   if (seconds < 10 && (zeros || minutes || hours )) {

@@ -1,99 +1,384 @@
-["1 mot/personne",
-"A la manière de…",
-"Abécédaire",
-"Abécédaire inversée",
-"Ambiance musicale",
-"Anges et démons",
-"Animal totem",
-"Avec accent (imposé ou non par l’arbitre)",
-"Avec accessoire",
-"Bande-annonce",
-"Blockbuster américain",
-"Bollywood",
-"Burlesque",
-"C’est pas sorcier",
-"Ça me rappelle une chanson",
-"Carré des  émotions",
-"Carré Hollandais",
-"Cartoon",
-"Cauchemar",
-"Chantée",
-"Comédie musicale",
-"Conceptuelle norvégienne",
-"Contact",
-"Conte (nordique, africain, oriental…)",
-"Contes et légendes",
-"Dans le noir",
-"Dansée",
-"De cape et d’épée",
-"Dégressive",
-"Dépressive",
-"Dessin animé",
-"Dessin animé éducatif",
-"Dictionnaire",
-"Dieu est parmi nous",
-"Dit-il, dit-elle",
-"Doublage",
-"Doublage vidéo",
-"Double poursuite (ou poursuite tout court)",
-"Dramatique",
-"Dystopie",
-"Effet papillon",
-"Encore",
-"Epistolaire",
-"Espace infini",
-"Exagérée",
-"Exercice de style",
-"Exercice de style musical",
-"Fait divers",
-"Film à petit budget",
-"Film d’horreur",
-"Fusillade",
-"Gazou/Kazoo",
-"Gromelots",
-"Histoire à plusieurs voix",
-"Horoscope",
-"Je ne comprends pas ce mime",
-"Le début de la fin (Mémento)",
-"Leader/Leadé",
-"Mains et visage",
-"Manches à balai",
-"Mille et une façon de...",
-"Mille et un pires...",
-"Mitraillette",
-"Mots pièges",
-"Ni oui, ni non",
-"No limit (sans limite d’espace)",
-"Ode à...",
-"On connaît déjà la fin",
-"One man show/Stand up",
-"Otage",
-"Péplum",
-"Photo-perso",
-"Plateau en équilibre",
-"Poker indien",
-"Progressive",
-"Questions uniquement",
-"Rap battle",
-"Rewind-Forward",
-"Réduction de budget",
-"Rimée",
-"Roman policier",
-"Sans paroles",
-"Schyzophrène",
-"Schyzophrène musicale",
-"Science-fiction",
-"Si tu vois ce que je veux dire",
-"Silencieuse",
-"Space Opera",
-"Speed dating",
-"Spot pub",
-"Téléréalité",
-"Théâtre avant-gardiste",
-"Tragédie grecque",
-"Travail à la chaîne",
-"Tri-posture",
-"Vaudeville (théâtre de boulevard)",
-"Vitesse variable",
-"Western",
-"Zapping télévisé (ou radio)"]
+[
+  {
+    "name": "1 mot/personne",
+    "description": "L'arbitre demande au public des mots qui seront ensuite attribués aux improvisateurs en jeu. Ces derniers n'auront le droit de se servir que de ce mot pour parler un peu à la manière d'un pokémon"
+  },
+  {
+    "name": "A la manière de...",
+    "description": "Suivie du nom d'un auteur célèbre (Ionesco, Molière, Tchekhov, Tolkien...), cette catoche un peu fourre-tout permet d'imposer à l'impro une couleur particulière."
+  },
+  {
+    "name": "Abécédaire",
+    "description": "La première réplique de l'impro devra commencer par A, la seconde par B et ainsi de suite. Elle peut s'arrêter à la première confusion, à la fin de l'alphabet ou à la fin d'un temps imparti."
+  },
+  {
+    "name": "Abécédaire inversée",
+    "description": "La même que l'abécédaire... mais à l'envers ! La première réplique commencera par Z, la suivante par Y et ainsi de suite. Idem au niveau des durées."
+  },
+  {
+    "name": "Ambiance musicale",
+    "description": "L'improvisation se déroulera au rythme d'une ambiance musicale choisie à l'avance (DJ) ou improvisée en live (musiciens). Les émotions, l'action, les personnages devront être influencés par cette musique. Conseil : choisir une ambiance avec beaucoup de variations de rythme."
+  },
+  {
+    "name": "Anges et démons",
+    "description": "Une équipe joue les anges, l'autre les démons. Une personne neutre, un improvisateur du public par exemple, aura un choix à faire. Pour l'exemple, admettons que le personnage se trouve devant une part de gâteau qui ne lui appartient pas, les démons auront pour but de lui faire manger tandis que les anges devront le faire se détourner de cette tentation. Pour ce faire, les improvisateurs auront droit à tout types de service à savoir personnages, objets, Deus Ex Machina..."
+  },
+  {
+    "name": "Animal totem",
+    "description": "L'arbitre demande au public des noms d'animaux puis les attribue aux improvisateurs. Ces derniers auront pour caucus un personnage (humain) inspiré du caractère et du physique de cet animal."
+  },
+  {
+    "name": "Avec accent (imposé ou non par l'arbitre)",
+    "description": "Chaque joueur rentrant sur la patoche devra prendre un accent différent de ceux déjà en jeu. Si l'arbitre les impose il le fait à chaque entrée d'un improvisateur sur la patoche."
+  },
+  {
+    "name": "Avec accessoire",
+    "description": "L'arbitre met à la disposition des comédiens un objet qu'ils devront détourner de son usage soit l'utiliser de toutes les manières possibles à l'exception de ce pour quoi il a été fait."
+  },
+  {
+    "name": "Bande-annonce",
+    "description": "Pourquoi faire un film en entier quand on peut voir sa bande-annonce ? Voix off charismatique, scènes fortes, explosions sont de rigueur au cours de cette impro."
+  },
+  {
+    "name": "Blockbuster américain",
+    "description": "Rocky 8, Mission Impossible 12, Pirates des Caraïbes 5, autant de films bourrés d'action et d'effets spéciaux ainsi que de bons sentiments américains."
+  },
+  {
+    "name": "Bollywood",
+    "description": "Un film aux allures d'Hollywood, mais réalisé en Inde : Chorégraphies orientales à tout bout de champs, effets spéciaux bizarres, exagérations énormes sont les codes du Bollywood."
+  },
+  {
+    "name": "Burlesque",
+    "description": "Univers parallèle dans lequel chaque action est d'une difficulté inimaginable, et la recherche de la solution est acharnée et ridicule. Ici la logique n'a plus court et s'asseoir sur une chaise demandera facilement une bonne minute et de multiples essais."
+  },
+  {
+    "name": "C'est pas sorcier",
+    "description": "Fred et Jamy sont de retour pour éduquer le spectateur ! Une impro \"C'est pas sorcier\" devra apprendre en amusant et user de ressort didactique (schémas, maquettes, démonstrations...). Chauffe Marcel !"
+  },
+  {
+    "name": "Ca me rappelle une chanson",
+    "description": "L'arbitre pourra interrompre l'impro à n'importe quel moment en lançant \"Ca me rappelle une chanson\". L'improvisateur devra alors chanter une chanson en rapport avec l'action qu'il était en train de faire."
+  },
+  {
+    "name": "Carré des émotions",
+    "description": "A chaque coin de la patinoire est attribuée une émotion, peur, joie colère, etc... Lorsqu'un improvisateur se trouve dans une zone de la patinoire, il joue l'émotion qui est associée. S'il change de zone, il change d'émotion. Note : on peut envisager un autre découpage de la scène avec des bandes avant, milieu et arrière par exemple."
+  },
+  {
+    "name": "Carré Hollandais",
+    "description": "Quatre improvisateurs qui forment un carré. Chaque face du carré correspond à une impro avec une catégorie imposée. quand l'arbitre siffle, le carré pivote et on assiste à une autre impro avec une autre catégorie. Si on a fait un tour complet, on poursuit les impros déjà commencées."
+  },
+  {
+    "name": "Cartoon",
+    "description": "Tex Avery n'a qu'a bien se tenir. Armes énormes, chutes et défi à la gravité, exagération, bruitages et situations létales qui ne le sont en fait pas du tout sont les maitres mots du cartoon qui se doit de faire rire petits et grands."
+  },
+  {
+    "name": "Cauchemar",
+    "description": "L'arbitre demande à une personne du public de raconter son dernier/son pire cauchemar. Ce récit servira de caucus aux improvisateurs qui devront rejouer ce cauchemar sur scène."
+  },
+  {
+    "name": "Chantée",
+    "description": "Dans cette improvisation, chaque phrase, chaque mot se doit d'être chanté et non parlé, sous peine de faute ! Trouver un air ainsi qu'un refrain aidera grandement l'improvisateur dans cette épreuve."
+  },
+  {
+    "name": "Comédie musicale",
+    "description": "Une histoire banale... Au sein de laquelle surgissent tout d'un coup danseurs et chanteurs qui mettront en musique une situation donnée, avant de reprendre normalement le fil du récit. Attention, il ne s'agit pas de multiplier les phrases chantées sur des airs différents. Chaque passage chanté doit être une mini-chanson."
+  },
+  {
+    "name": "Conceptuelle norvégienne",
+    "description": "Aussi appelée Surréaliste. Ici, pas de logique, pas de lien, l'impro se doit d'être bizarre, presque décousue, mais doit malgré tout raconter quelque chose."
+  },
+  {
+    "name": "Contact",
+    "description": "Au cours de l'improvisation, il doit y avoir en permanence au moins un contact physique entre deux improvisateurs. Si la chaîne est rompue, c'est une faute de hors-catégorie que doit siffler l'arbitre."
+  },
+  {
+    "name": "Conte (nordique, africain, oriental...)",
+    "description": "Il était une fois un château perdu au milieu d'une forêt, un manoir, une hutte, un palais aux mille et unes couleurs, un immense baobab,... Un conte est une histoire avec une structure narrative précise et en général, une petite morale de fin. On passe par les sacro-saintes étapes : situation initiale, élément déclencheur, péripéties, élément de résolution, conclusion. En impro il y a généralement un conteur, en retrait à l'avant ou en fond de scène qui se charge de colorer et de faire avancer l'histoire. Il y a également des protagonistes qui jouent l'histoire. Le secret de la réussite de cette catoche est un savant équilibre entre conteur et personnages."
+  },
+  {
+    "name": "Contes et légendes",
+    "description": "Contrairement au conte de fées, les contes et légendes ne se terminent pas forcément bien. Ils sont parfois plus sombres et traitent plus de la mythologie (celtique par exemple). Le conte Bilbo le Hobbit illustre bien cette catégorie selon moi (Meugnon)."
+  },
+  {
+    "name": "Dans le noir",
+    "description": "La lumière est baissée par les techniciens pour qu'on distingue tout juste les maillots des équipes (il faut penser au vote). Les joueurs ne pourront compter ici que sur leur voix et sur d'éventuels bruitages."
+  },
+  {
+    "name": "Dansée",
+    "description": "Une musique sera prévue pour accompagner l'impro durant laquelle les improvisateurs ne pourront bouger que selon des gestes et des pas harmonieux et rythmés. Cette improvisation peut très bien se passer de paroles."
+  },
+  {
+    "name": "De cape et d'épée"
+  },
+  {
+    "name": "Défi",
+    "description": "Catégorie comparée où chaque équipe donne un défi à réaliser pendant l'improvisation à son adversaire. Conseils : Eviter les private joke, donner des choses spécifiques si possible (jargon local, un truc dans lequel l'équipe qui donne le défi est forte, whatev.) Rappel : Le but de cette catégorie n'est pas de plomber l'improvisation adverse, mais de la servir"
+  },
+  {
+    "name": "Dégressive",
+    "description": "Une improvisation sera jouée une première fois. Puis répétée plusieurs fois en réduisant à chaque fois le temps d'improvisation au bon goût de l'arbitre."
+  },
+  {
+    "name": "Dépressive",
+    "description": "On joue une première impro standard, libre puis on la rejoue une seconde, une troisième voire une quatrième fois. Chaque fois l'impro doit être la même mais en plus dépressive."
+  },
+  {
+    "name": "Dessin animé"
+  },
+  {
+    "name": "Dessin animé éducatif"
+  },
+  {
+    "name": "Dictionnaire"
+  },
+  {
+    "name": "Dieu est parmi nous"
+  },
+  {
+    "name": "Dit-il,  dit-elle",
+    "description": "Lors de cette improvisation, les improvisateurs fonctionnent en binômes, l'un dans la patoche, l'autre hors scène en service. A la fin de chaque réplique du joueur en scène, celui en service ajoute \"Dit-il/elle...\" suivi d'une action, d'une émotion ou de n'importe quelle contrainte que le joueur en scène doit alors intégrer à son jeu. Variante : Pas de joueurs en service, et ce sont les joueurs en scène qui se donnent les contraintes les uns les autres."
+  },
+  {
+    "name": "Doublage",
+    "description": "Parfois appelée \"Doublage américain\". Les improvisateurs fonctionnent par paires : l'un joue sur scène et mime des dialogues, mais ne parle pas. L'autre, en service fait la voix de son binôme. Chacun des deux peut apporter des idées pour faire avancer l'impro. Attention à essayer de rester le plus synchronisé possible entre les mouvements des lèvres et les dialogues !"
+  },
+  {
+    "name": "Doublage vidéo",
+    "description": "Un extrait vidéo est projeté sans le son, et les improvisateurs doivent alors inventer les dialogues et les bruitages. Un même extrait pourra être utilisé plusieurs fois et doublé de façons différentes, en changeant les rôles des improvisateurs ou en ajoutant une catégorie (film d'horreur, de guerre, comédie musicale,...). Pour l'arbitre : attention de bien définir les rôles de chaque improvisateur avant la diffusion de la vidéo pour éviter les confusions. Une catégorie plutôt utilisée en catch."
+  },
+  {
+    "name": "Double poursuite (ou poursuite tout court)"
+  },
+  {
+    "name": "Dramatique",
+    "description": "Une improvisation dramatique est jouée au premier degré. Le but est ici de construire une belle histoire, pas forcément triste mais sans chercher le rire car des arbitres un peu pointilleux choisiront de stopper l'impro au premier rire du public."
+  },
+  {
+    "name": "Dystopie"
+  },
+  {
+    "name": "Effet papillon"
+  },
+  {
+    "name": "Encore",
+    "description": "A chaque coup de sifflet de l'arbitre, le dernier improvisateur à avoir fait une action ou dit une réplique doit refaire celle-ci instantanément de manière différente. L'improvisateur peut changer un détail ou bien partir sur quelque chose de complètement différent, sachant que l'arbitre peut demander de refaire la même action autant de fois qu'il le souhaite, jusqu'à ce qu'il soit satisfait."
+  },
+  {
+    "name": "Epistolaire"
+  },
+  {
+    "name": "Espace infini",
+    "description": "Les dimensions ont changées, les improvisateurs sont enfermés dans un cube et ne peuvent pas en sortir. Tout ce qui sort à gauche revient à droite, idem de droite à gauche, d'avant en arrière et de haut en bas. Pour que la contrainte marche, il est bon que les personnages de l'impro sachent qu'ils sont dans un tel univers et en jouent. Conseil : Fonctionner par binôme pour ne jamais être surpris."
+  },
+  {
+    "name": "Exagérée",
+    "description": "Le jeu, le niveau sonore, les émotions, ici tout est exagéré et poussé à l'extrême. Même un personnage neutre doit être exagérément neutre. Une catégorie qui impliquera beaucoup d'énergie et d'engagement. Note : On commence souvent par une impro libre puis on la refait une fois en plus exagérée, puis encore plus exagérée puis encore encore plus exagérée, etc."
+  },
+  {
+    "name": "Exercice de style"
+  },
+  {
+    "name": "Exercice de style musical"
+  },
+  {
+    "name": "Fait divers"
+  },
+  {
+    "name": "Film à petit budget",
+    "description": "Comme son nom l'indique, lors de cette improvisation vous n'avez pas les mêmes moyens que sur un blockbuster. Vous devez réaliser un film avec les moyens du bord, à savoir des techniciens incompétents, des acteurs de série B, du matériel technique (son et lumière) défaillant, des décors en cartons que vous avez faits vous-même, un scénario bidon, et des effets spéciaux réalisés sur Paint. Bref c'est la déch'. Note : L'impro peut relater la production du film, ou montrer le film en lui-même."
+  },
+  {
+    "name": "Film d'horreur"
+  },
+  {
+    "name": "Fin de phrase",
+    "description": "Quand un improvisateur le souhaite, il peut lever la main pour demander au public une \"fin de phrase\", il baisse la main quand une proposition lui convient et l'impro reprend au moment où il s'était interrompu. Variante à deux joueurs : prendre deux joueurs du public, les asseoir sur scène, et même jeu pour un joueur uniquement."
+  },
+  {
+    "name": "Fusillade",
+    "description": "Tous les joueurs doivent improviser chacun à leur tour individuellement pendant 30 secondes sans préparation sur un mot donné par l'arbitre. On alterne les équipes pour chaque passage."
+  },
+  {
+    "name": "Gazou/Kazoo",
+    "description": "Pour s'exprimer durant cette improvisation, les joueurs n'auront droit qu'au doux son d'un gazou/kazoo."
+  },
+  {
+    "name": "Gromelots",
+    "description": "Tel les minions ou les lapins crétins, vous ne pourrez vous exprimer que dans un langage purement fictif forné de consonnes et de syllabes mises les unes après les autres de manière plus ou moins aléatoire. A vous de vous créer une nouvelle langue et attention à ne pas tricher en réutilisant des mots existants ! Variante : Gromelot Japonais. C'est pareil mais ca sonne Japonais."
+  },
+  {
+    "name": "Histoire à plusieurs voix",
+    "description": "On aligne les joueurs en ligne en milieu de scène. L'arbitre pointe un joueur qui commence l'histoire, quand l'arbitre change pour désigner un autre joueur, celui-ci poursuit l'histoire au mot près. L'arbitre continue ainsi de \"zapper\" jusqu'à la conclusion. Il peut également désigner deux personnes en même temps qui devront parler et narrer ensemble."
+  },
+  {
+    "name": "Horoscope",
+    "description": "L'arbitre demande le signe de quelqu'un dans l'assemblée, public, joueur, staff, peu importe. Il lit ensuite l'horoscope associé à ce signe qui servira de thème à l'impro qui va suivre. On peut considérer que cette improvisation est sans caucus car l'horoscope suffit à avoir une bonne base."
+  },
+  {
+    "name": "Instabilité catégorique"
+  },
+  {
+    "name": "Je ne comprends pas ce mime",
+    "description": "Cette catégorie est assez compliquée et expérimentale. En gros à chaque fois que quelqu'un fait un mime sur scène, la personne en face DOIT mal l'interpréter. C'est une gymnastique intellectuelle ardue pour débrancher son cerveau. Le but étant de faire un maximum de mime et les plus clairs possibles pour que l'autre puisse prendre le contre-pieds."
+  },
+  {
+    "name": "Le début de la fin (Mémento)",
+    "description": "Avant de voir l'impro, les improvisateurs vont jouer la fin de l'histoire sur 30s/1min par exemple. On débute alors l'impro qui se terminera sur les premiers mots de la fin jouée précédemment. Une variante de cette catégorie est la \"Mémento\". Cette fois-ci, on joue la minute de fin de l'impro, puis la minute la précédant, puis la minute la précédant, puis la minute la précédant, etc."
+  },
+  {
+    "name": "Leader/Leadé"
+  },
+  {
+    "name": "Mains et visage",
+    "description": "Ici, chaque personnage sera composé de deux improvisateurs. L'un fera les mains, en passant ses bras sous ceux de l'autre improvisateur qui incarnera le reste du personnage (sa voix, son visage, son corps)."
+  },
+  {
+    "name": "Manches à balai",
+    "description": "Deux improvisateurs, deux manches à balai qui relient leurs paumes de main (ex : entre la paume droite de A et la paume gauche de B il y a un manche un balai). Les improvisateurs doivent donc réaliser l'impro en respectant cette contrainte de mouvement. Ils peuvent jouer de ces situations. Attention, si un balai tombe : c'est le drame !"
+  },
+  {
+    "name": "Mille et un pires...",
+    "description": "Déroulement similaire au \"Mille et une façons\", à ceci près que l'arbitre donne un métier (jardinier, garagiste, improvisateur,...) et que les improvisateurs doivent imaginer les pires représentants de ce métier (on remarquera que pour les pires improvisateurs, ils n'ont en général pas besoin de se fouler)."
+  },
+  {
+    "name": "Mille et une façon de...",
+    "description": "Les improvisateurs sont alignés en fond de scène. L'arbitre donne alors une action a réaliser (Couper un morceau de bois, respirer par le nez, invoquer Satan) et les joueurs viennent chacun leur tour (soit celui qui a une idée y va spontanément, soit l'arbitre désigne) exécuter l'action d'une manière différente à chaque fois."
+  },
+  {
+    "name": "Mitraillette",
+    "description": "L'équivalent de la fusillade mais par binômes. Les improvisateurs sont tous alignés en fond de scène et forment des binômes mixtes en équipes. A son tour, chaque binôme s'avance, l'arbitre donne un mot et les deux joueurs ont 1min pour improviser ensemble sur ce mot et sans caucus."
+  },
+  {
+    "name": "Mots pièges",
+    "description": "L'arbitre établit au préalable une liste de mots-pièges qu'il garde pour lui. si un improvisateur a le malheur de prononcer l'un de ces mots-pièges, il récupère la pénalité associée préalablement au mot. La difficulté pour l'arbitre est de choisir des mots que les improvisateurs vont être amenés à prononcer. Il peut également décider sur le moment des mots-pièges s'il en a envie."
+  },
+  {
+    "name": "Ni oui ni non",
+    "description": "Comme le jeu éponyme, il est interdit aux joueurs de prononcer l'un des mots proscrits. S'il y a manquement à la règle, on peut décider de mettre directement une faute à l'équipe, au joueur, ou d'avoir un système de relais (l'équipe qui a réussi à éliminer l'intégralité de l'équipe adverse marque le point). On peut également penser à des variantes en compliquant petit à petit la tâche des improvisateurs (ni je, ni nous ou encore ni être, ni avoir)."
+  },
+  {
+    "name": "No limit (sans limite d'espace)",
+    "description": "Les déplacements des improvisateurs ne se limitent plus au cadre de la patoche, ils peuvent s'enfuir n'importe où dans la salle. Cette catégorie peut également permettre l'utilisation d'accessoires illégaux (micro, public...) tout en restant dans le raisonnable."
+  },
+  {
+    "name": "Ode à...",
+    "description": "Chaque joueur passe à son tour, on demande un nom d'objet au public par exemple \"radiateur\". Le joueur doit donc déclamer une ode au radiateur pendant la durée posée par l'arbitre (ex : 1min). Marche bien en 2j/eq en match soit 4 odes."
+  },
+  {
+    "name": "On connaît déjà la fin",
+    "description": "L'arbitre impose une fin connue à cette histoire par exemple \"cela se terminera à la mort de ce personnage\". L'impro est jouée jusqu'à cet instant crucial."
+  },
+  {
+    "name": "One man show/Stand up",
+    "description": "A la manière des spectacles d'humour, cette impro peut prendre soit la forme d'un sketch avec personnage (one man show), soit d'un humoriste qui raconte des anecdotes de la vie de tous les jours et en fait des sketches (stand up). Il y a bien sûr énormément de formes pour ce type de spectacle et donc autant d'impros possibles."
+  },
+  {
+    "name": "Otage",
+    "description": "On prend une personne dans le public avec qui les improvisateurs doivent jouer et qu'ils doivent inclure un max dans l'impro. Si le public s'ennuie ou n'est pas sur scène ou que les improvisateurs ne jouent pas avec, on peut siffler un hors cadre"
+  },
+  {
+    "name": "Péplum",
+    "description": "Troie, 300, Gladiator, le péplum est un genre de blockbuster américain dont l'action se déroule dans l'antiquité grecque ou romaine. Les ingrédients pour bien réussir : poser une bonne ambiance d'époque avec un bon vocabulaire et des personnages adéquats (sénateurs, esclaves, soldats,prêtresses,...), ajouter une dose de divinités (prières, sacrifices, interventions divines, questionnement sur les Dieux,...), saupoudrer le tout de combats épiques à la lance et au glaive avec surtout beaucoup de héros/guerriers qui s'opposent ou non"
+  },
+  {
+    "name": "Photo-perso",
+    "description": "L'arbitre appelle les improvisateurs un par un et leur montre un portrait photo. Chaque joueur doit se servir de la photo pour se créer un personnage, l'impro se déroule ensuite normalement. Note : Il sera bon d'afficher la photo en grand pour que le public la voie également."
+  },
+  {
+    "name": "Plateau en équilibre",
+    "description": "On définit par un marquage au sol ou un objet le centre du plateau. A partir de ce moment là, le plateau de jeu est considéré comme une assiette posée sur un crayon. tout déséquilibre des joueurs le fait donc tomber. En clair, cela signifie pour le jeu de grosses contraintes de déplacement et une bonne écoute. L'idée est de jouer la contrainte pour embêter son partenaire. En binôme : si l'un avance vers le centre, l'autre doit avancer aussi. Le but est de justifier dans l'impro chacun des déplacements imposés et de construire avec. Si le plateau est trop déséquilbré, il \"tombe\". On peut alors considérer l'impro comme \"perdue\" en fonction du type de spectacle jouée."
+  },
+  {
+    "name": "Poker indien",
+    "description": "Admettons que l'on a 4 improvisateurs sur scène, pendant que l'un sort de la salle, l'arbitre définit avec le public quel personnage célèbre le joueur incarnera. Ainsi, chaque joueur ignore qui il est mais sait qui sont les trois autres. Le propre de cette catégorie est de faire deviner subtilement aux autres quels personnages ils sont. Une fois qu'un joueur a compris qui il est, il peut librement interpréter son personnage à fond. Note : Pour l'arbitre il peut être intéressant de faire un checkpoint au milieu pour demander aux joueurs s'ils ont deviné ou non leur identité. Cette catégorie se fait peut-être mieux en catch qu'en match."
+  },
+  {
+    "name": "Progressive",
+    "description": "C'est exactement l'inverse de la dégressive. On commence par une impro courte (15s par exemple), puis une plus longue (ex : 45s), une plus longue (ex : 1min30s), une encore plus longue (ex : 3min). A chaque nouvelle impro, on développe l'histoire de plus en plus. L'impro la plus courte doit permettre de poser tous les éléments clés de l'impro et les impros suivantes devront créer des liens entre ces jalons."
+  },
+  {
+    "name": "Questions uniquement",
+    "description": "Au cours de cette improvisation, les répliques des joueurs ne pourront être que des questions. S'il y a manquement à la règle, on peut décider de mettre directement une faute à l'équipe, au joueur, ou d'avoir un système de relais (l'équipe qui a réussi à éliminer l'intégralité de l'équipe adverse marque le point)."
+  },
+  {
+    "name": "Rap battle"
+  },
+  {
+    "name": "Réduction de budget",
+    "description": "Deux variantes, un principe commun : Mettez six improvisateurs sur scène, faites leur faire une scène, enlevez un joueur, un autre doit reprendre le personnage de ce joueur, et doit jongler entre les deux (son premier+l'autre). Continuez juqu'à ce qu'une seule personne fasse tous les rôles. Deux possibilités : Enlever en priorité les joueurs qui ont plusieurs personnages, les autres en récupèrent donc de plus en plus. Ou enlever les personnages et les mettre sur les improvisateurs les plus aux taquets, un n'est du coup jamais déchargé. En match, soyez conscient que vous allez donner le point à l'équipe du dernier joueur en scène !"
+  },
+  {
+    "name": "Rewind-Forward"
+  },
+  {
+    "name": "Rimée"
+  },
+  {
+    "name": "Roman policier"
+  },
+  {
+    "name": "Sans paroles",
+    "description": "Comme son nom l'indique, on ne parle pas dans cette impro. Mais cela n'empêche pas de faire du bruit, siffloter, ou de laisser s'échapper quelques onomatopées. Ce n'est pas une improvisation silencieuse."
+  },
+  {
+    "name": "Schyzophrène"
+  },
+  {
+    "name": "Schyzophrène musicale"
+  },
+  {
+    "name": "Science-fiction",
+    "description": "Catégorie très large donnant beaucoup de libertés. En effet la science fiction peut très bien impliquer des aliens, des vaisseaux spatiaux et se dérouler dans un autre univers (Men In Black ou Star Wars par exemple), mais elle peut également se porter sur des avancées technologiques plus ciblées, dans un monde très peu différent du notre (Inception est un très bon exemple : le monde est le même, mais certaines personnes ont découvert comment s'infiltrer dans les rêves). Libre à vous donc de créer votre univers autour de ce qu'il vous plaira, du moment que cela implique, à un moment ou un autre, une avancée technologique ou scientifique. La dystopie peut également être inclue dans la catégorie science-fiction (ex : 1984 ou Farenheit 451)."
+  },
+  {
+    "name": "Si tu vois ce que je veux dire",
+    "description": "Chaque réplique de l'improvisation doit être terminée par \"si tu vois ce que je veux dire\"."
+  },
+  {
+    "name": "Silencieuse",
+    "description": "Durant cette improvisation, les joueurs ne devront faire absolument aucun bruit ; attention aux grincements du parquet, les oreilles de l'arbitre seront à l'affût."
+  },
+  {
+    "name": "Space Opera",
+    "description": "Une improvisation à la manière des plus grands space-operas : Star Wars, Star Trek, Stargate, ou le Cinquième Elément. Cela implique forcément des voyages dans l'espace, dans le temps, des vaisseaux spatiaux et une grande diversité d'aliens en tout genre. Cette improvisation doit nous faire voyager entre différents univers, nous faire découvrir de nouvelles planètes, tout cela avec une bonne dose d'action. Les conflits politiques sont également un bon moteur d'intrigue pour ce genre de récit."
+  },
+  {
+    "name": "Speed dating"
+  },
+  {
+    "name": "Spot pub"
+  },
+  {
+    "name": "Téléréalité"
+  },
+  {
+    "name": "Théâtre avant-gardiste"
+  },
+  {
+    "name": "Tragédie grecque"
+  },
+  {
+    "name": "Travail à la chaîne",
+    "description": "La phrase d'un improvisateur doit obligatoirement commencer par le dernier mot prononcé dans la phrase d'avant par un autre improvisateur (format le plus intéressant peut-être pour cette catoche : 1 joueur/équipe)."
+  },
+  {
+    "name": "Tri-posture",
+    "description": "Avant l'impro, l'arbitre définit avec ou sans le public trois tableaux. Le premier servira de départ à l'improvisation, le second sera une étape, le troisième marquera la fin. Les trois tableaux n'ont aucun rapport entre eux ce qui rendra le travail des improvisateurs encore plus difficile. Note : On a ici une catégorie plutôt allouée au catch avec deux joueurs à chaque posture. Pour s'amuser l'arbitre peut décider de ne pas valider le checkpoint de l'une ou l'autre des postures pour obliger les improvisateurs à mieux justifier leurs déplacements."
+  },
+  {
+    "name": "Vaudeville (théâtre de boulevard)",
+    "description": "Des amants cachés dans le placard, des quiproquos rigolos, des malentendus tirés par les cheveux, voila les éléments qui composent bien souvent les vaudevilles. Ajoutez a cela beaucoup d'allers et venues entre des personnages souvent clichés, un léger sur-jeu et une action se déroulant au début du vingtième siècle dans de riches familles bourgeoises et vous avez la plupart des éléments qu'il vous faut. Le Vaudeville est surtout et avant tout basé sur un comique de situation plutôt qu'un festival de plaisanteries graveleuses."
+  },
+  {
+    "name": "Vitesse variable",
+    "description": "Dix vitesses de jeu sont mises en place par l'arbitre, vitesse 1 correspondant à une improvisation extrêmement ralentie (presque a l'arrêt), et 10 une improvisation accelérée a l'extrême. 5 est la vitesse normale, et les autres vitesses sont des nuances. A la bonne volonté de l'arbitre, l'improvisation accélèrera ou ralentira subitement."
+  },
+  {
+    "name": "Western",
+    "description": "A la manière des films de James Dean aux westerns spaghettis de Sergio Leone, en passant par des westerns plus récents tels que True Grit ou Django Unchained, le western se déroulera forcément dans l'ouest ou le sud de l'Amerique, plutôt dans la deuxième partie du 19ème siècle. Libre ensuite de faire un western au rythme lent et aux duels interminables, ou bien une reconstitution de la ruée vers l'or, ou encore une comédie sur l'élevage des vaches dans le désert. Attention aux boules de poussière et aux portes à battants de saloon, qui constituent des clichés de premier plan. L'action peut également se situer dans d'autres contrées telles que le Mexique mais aussi la Mandchourie (Cf. l'excellent western coréen Le Bon, la Brute et le Cinglé)."
+  },
+  {
+    "name": "Zapping télévisé (ou radio)",
+    "description": "3 à 4 binômes d'improvisateurs en fond de scène, une chaîne attribuée à chacun. L'arbitre zappe de chaîne en chaîne en sifflant et pointant du doigt. Conseil : Laisser le temps au début et accélérer sur la fin."
+  }
+]
